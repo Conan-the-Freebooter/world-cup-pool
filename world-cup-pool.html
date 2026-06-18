@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 2026 Pool — Standings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Narrow:wght@500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pitch: #0a1f17;
+    --pitch-2: #0e2a1f;
+    --line: rgba(255,255,255,0.10);
+    --line-2: rgba(255,255,255,0.18);
+    --ink: #f4f6f4;
+    --muted: #9db0a6;
+    --faint: #6b7d73;
+    --lime: #c8ff4d;
+    --lime-dim: #8fb83a;
+    --gold: #ffd24a;
+    --card: #102a20;
+    --card-2: #0d2419;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Archivo', system-ui, sans-serif;
+    background: var(--pitch);
+    background-image:
+      radial-gradient(circle at 50% -10%, rgba(200,255,77,0.08), transparent 45%),
+      repeating-linear-gradient(90deg, transparent, transparent 78px, rgba(255,255,255,0.018) 78px, rgba(255,255,255,0.018) 156px);
+    color: var(--ink);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 0 18px 64px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  header { padding: 44px 0 28px; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    font-family: 'Archivo Narrow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--lime-dim);
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: clamp(34px, 8vw, 60px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.96;
+    text-transform: uppercase;
+  }
+  h1 .leaf { color: var(--lime); }
+  .sub {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 46ch;
+  }
+  .meta-row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    align-items: center;
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 12.5px;
+    color: var(--faint);
+  }
+  .meta-row b { color: var(--muted); font-weight: 500; }
+  .live {
+    display: inline-flex; align-items: center; gap: 7px;
+    color: var(--lime);
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 0 rgba(200,255,77,0.5); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(200,255,77,0.45)} 70%{box-shadow:0 0 0 7px rgba(200,255,77,0)} 100%{box-shadow:0 0 0 0 rgba(200,255,77,0)} }
+
+  .section-label {
+    font-family: 'Archivo Narrow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--faint);
+    margin: 34px 2px 14px;
+  }
+
+  .board { display: flex; flex-direction: column; gap: 9px; margin-top: 22px; }
+  .team {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.15s;
+  }
+  .team:hover { border-color: var(--line-2); }
+  .team.leader { border-color: rgba(255,210,74,0.4); background: linear-gradient(180deg, rgba(255,210,74,0.06), var(--card)); }
+
+  .team-head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 46px 1fr auto 22px;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 16px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+  }
+  .rank {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--faint);
+    text-align: center;
+  }
+  .leader .rank { color: var(--gold); }
+  .team-name {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .team-sub {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 11.5px;
+    color: var(--faint);
+    margin-top: 3px;
+    letter-spacing: 0.02em;
+  }
+  .bar-track {
+    height: 6px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 9px;
+  }
+  .bar-fill { height: 100%; background: var(--lime-dim); border-radius: 4px; }
+  .leader .bar-fill { background: var(--gold); }
+  .pts {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+  .pts .u { font-size: 12px; color: var(--faint); margin-left: 4px; font-weight: 400; }
+  .chev { color: var(--faint); transition: transform 0.2s; font-size: 20px; line-height: 1; text-align: center; }
+  .team.open .chev { transform: rotate(180deg); }
+
+  .detail { display: none; padding: 2px 16px 16px 76px; }
+  .team.open .detail { display: block; }
+  .crow {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+    border-top: 1px solid var(--line);
+  }
+  .crow:first-child { border-top: none; }
+  .cname { color: var(--muted); }
+  .cname .pr { color: var(--faint); font-family: 'Spline Sans Mono', monospace; font-size: 11.5px; margin-left: 6px; }
+  .cpts { font-family: 'Spline Sans Mono', monospace; font-weight: 500; }
+  .cpts.zero { color: var(--faint); }
+  .cpts.scored { color: var(--lime); }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  @media (max-width: 560px) { .grid2 { grid-template-columns: 1fr; } }
+  .info-card {
+    background: var(--card-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+  }
+  .info-card h3 {
+    font-family: 'Archivo Narrow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--lime-dim);
+    margin-bottom: 12px;
+  }
+  .scale { display: flex; flex-direction: column; gap: 7px; }
+  .scale-row { display: flex; justify-content: space-between; font-size: 13.5px; }
+  .scale-row span:first-child { color: var(--muted); }
+  .scale-row span:last-child { font-family: 'Spline Sans Mono', monospace; color: var(--ink); font-weight: 500; }
+  .how { font-size: 13.5px; color: var(--muted); }
+  .how p { margin-bottom: 9px; }
+  .how b { color: var(--ink); font-weight: 600; }
+  .how .formula {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 12.5px;
+    color: var(--lime);
+    background: rgba(200,255,77,0.06);
+    border: 1px solid rgba(200,255,77,0.14);
+    border-radius: 7px;
+    padding: 8px 10px;
+    margin-top: 4px;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 11.5px;
+    color: var(--faint);
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">USA · Canada · Mexico 2026</div>
+    <h1>World Cup<br>Pool <span class="leaf">Standings</span></h1>
+    <p class="sub">Eight teams. Six countries each. Points scale with the round — longshots that go deep win it.</p>
+    <div class="meta-row">
+      <span class="live"><span class="dot"></span>Group stage</span>
+      <span><b id="matchCount">0</b> matches scored</span>
+      <span>Updated <b id="updated">—</b></span>
+    </div>
+  </header>
+
+  <div class="section-label">Leaderboard</div>
+  <div class="board" id="board"></div>
+
+  <div class="section-label">How scoring works</div>
+  <div class="grid2">
+    <div class="info-card">
+      <h3>Points = PR × multiplier</h3>
+      <div class="scale">
+        <div class="scale-row"><span>Group win</span><span>1×</span></div>
+        <div class="scale-row"><span>Group draw</span><span>0.5×</span></div>
+        <div class="scale-row"><span>Round of 32 win</span><span>3×</span></div>
+        <div class="scale-row"><span>Round of 16 win</span><span>5×</span></div>
+        <div class="scale-row"><span>Quarterfinal win</span><span>7×</span></div>
+        <div class="scale-row"><span>Semifinal win</span><span>9×</span></div>
+        <div class="scale-row"><span>3rd place win</span><span>11×</span></div>
+        <div class="scale-row"><span>Final win</span><span>15×</span></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <h3>The longshot edge</h3>
+      <div class="how">
+        <p>Every country carries a <b>power ranking</b> (PR) from the draft odds — favorites are low, underdogs are high.</p>
+        <p>A win is worth your country's PR times the round multiplier, so a high-PR underdog surviving into the knockouts pays off far more than a favorite cruising the group stage.</p>
+        <div class="formula">Croatia (PR 17): 1 win + 1 draw + R32 win = 76.5 pts</div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+</div>
+
+<script>
+const DATA = {"countryOwnerPr": {"Norway": {"owner": "SEA RANCH", "pr": 9}, "Croatia": {"owner": "SEA RANCH", "pr": 17}, "Austria": {"owner": "SEA RANCH", "pr": 23}, "Sweden": {"owner": "SEA RANCH", "pr": 21}, "DR Congo": {"owner": "SEA RANCH", "pr": 36}, "Curacao": {"owner": "SEA RANCH", "pr": 45}, "South Korea": {"owner": "LOS ANGELES", "pr": 31}, "Morocco": {"owner": "LOS ANGELES", "pr": 12}, "Portugal": {"owner": "LOS ANGELES", "pr": 6}, "Bosnia and Herzegovina": {"owner": "LOS ANGELES", "pr": 32}, "Algeria": {"owner": "LOS ANGELES", "pr": 30}, "New Zealand": {"owner": "LOS ANGELES", "pr": 41}, "Germany": {"owner": "SEMINARY", "pr": 7}, "Argentina": {"owner": "SEMINARY", "pr": 5}, "Uruguay": {"owner": "SEMINARY", "pr": 12}, "Scotland": {"owner": "SEMINARY", "pr": 24}, "Australia": {"owner": "SEMINARY", "pr": 34}, "Iraq": {"owner": "SEMINARY", "pr": 41}, "Iran": {"owner": "DUBLIN", "pr": 35}, "Japan": {"owner": "DUBLIN", "pr": 15}, "Senegal": {"owner": "DUBLIN", "pr": 20}, "Ivory Coast": {"owner": "DUBLIN", "pr": 26}, "Panama": {"owner": "DUBLIN", "pr": 36}, "Haiti": {"owner": "DUBLIN", "pr": 45}, "Canada": {"owner": "SAN LUIS OBISPO", "pr": 25}, "Ecuador": {"owner": "SAN LUIS OBISPO", "pr": 17}, "Brazil": {"owner": "SAN LUIS OBISPO", "pr": 4}, "Paraguay": {"owner": "SAN LUIS OBISPO", "pr": 28}, "South Africa": {"owner": "SAN LUIS OBISPO", "pr": 36}, "Saudi Arabia": {"owner": "SAN LUIS OBISPO", "pr": 36}, "Mexico": {"owner": "PINE STREET", "pr": 19}, "Colombia": {"owner": "PINE STREET", "pr": 11}, "Switzerland": {"owner": "PINE STREET", "pr": 15}, "Ghana": {"owner": "PINE STREET", "pr": 28}, "Spain": {"owner": "PINE STREET", "pr": 1}, "Uzbekistan": {"owner": "PINE STREET", "pr": 41}, "USA": {"owner": "BOISE", "pr": 14}, "Netherlands": {"owner": "BOISE", "pr": 8}, "Czechia": {"owner": "BOISE", "pr": 26}, "France": {"owner": "BOISE", "pr": 1}, "Qatar": {"owner": "BOISE", "pr": 41}, "Jordan": {"owner": "BOISE", "pr": 45}, "Turkey": {"owner": "KENTFIELD", "pr": 21}, "Belgium": {"owner": "KENTFIELD", "pr": 9}, "Egypt": {"owner": "KENTFIELD", "pr": 28}, "England": {"owner": "KENTFIELD", "pr": 3}, "Tunisia": {"owner": "KENTFIELD", "pr": 32}, "Cape Verde": {"owner": "KENTFIELD", "pr": 36}}, "results": [{"country": "Mexico", "stage": "group", "outcome": "win"}, {"country": "South Africa", "stage": "group", "outcome": "loss"}, {"country": "South Korea", "stage": "group", "outcome": "win"}, {"country": "Czechia", "stage": "group", "outcome": "loss"}, {"country": "Canada", "stage": "group", "outcome": "draw"}, {"country": "Bosnia and Herzegovina", "stage": "group", "outcome": "draw"}, {"country": "Qatar", "stage": "group", "outcome": "draw"}, {"country": "Switzerland", "stage": "group", "outcome": "draw"}, {"country": "Brazil", "stage": "group", "outcome": "draw"}, {"country": "Morocco", "stage": "group", "outcome": "draw"}, {"country": "Haiti", "stage": "group", "outcome": "loss"}, {"country": "Scotland", "stage": "group", "outcome": "win"}, {"country": "USA", "stage": "group", "outcome": "win"}, {"country": "Paraguay", "stage": "group", "outcome": "loss"}, {"country": "Australia", "stage": "group", "outcome": "win"}, {"country": "Turkey", "stage": "group", "outcome": "loss"}, {"country": "Germany", "stage": "group", "outcome": "win"}, {"country": "Curacao", "stage": "group", "outcome": "loss"}, {"country": "Ivory Coast", "stage": "group", "outcome": "win"}, {"country": "Ecuador", "stage": "group", "outcome": "loss"}, {"country": "Netherlands", "stage": "group", "outcome": "draw"}, {"country": "Japan", "stage": "group", "outcome": "draw"}, {"country": "Sweden", "stage": "group", "outcome": "win"}, {"country": "Tunisia", "stage": "group", "outcome": "loss"}, {"country": "Belgium", "stage": "group", "outcome": "draw"}, {"country": "Egypt", "stage": "group", "outcome": "draw"}, {"country": "Iran", "stage": "group", "outcome": "draw"}, {"country": "New Zealand", "stage": "group", "outcome": "draw"}, {"country": "Spain", "stage": "group", "outcome": "draw"}, {"country": "Cape Verde", "stage": "group", "outcome": "draw"}, {"country": "Saudi Arabia", "stage": "group", "outcome": "draw"}, {"country": "Uruguay", "stage": "group", "outcome": "draw"}, {"country": "France", "stage": "group", "outcome": "win"}, {"country": "Senegal", "stage": "group", "outcome": "loss"}, {"country": "Iraq", "stage": "group", "outcome": "loss"}, {"country": "Norway", "stage": "group", "outcome": "win"}, {"country": "Argentina", "stage": "group", "outcome": "win"}, {"country": "Algeria", "stage": "group", "outcome": "loss"}, {"country": "Austria", "stage": "group", "outcome": "win"}, {"country": "Jordan", "stage": "group", "outcome": "loss"}, {"country": "Portugal", "stage": "group", "outcome": "draw"}, {"country": "DR Congo", "stage": "group", "outcome": "draw"}, {"country": "Uzbekistan", "stage": "group", "outcome": "loss"}, {"country": "Colombia", "stage": "group", "outcome": "win"}, {"country": "England", "stage": "group", "outcome": "win"}, {"country": "Croatia", "stage": "group", "outcome": "loss"}, {"country": "Ghana", "stage": "group", "outcome": "win"}, {"country": "Panama", "stage": "group", "outcome": "loss"}]};
+
+const STAGE_MULT = { group_win:1, group_draw:0.5, r32:3, r16:5, qf:7, sf:9, third:11, final:15 };
+const cop = DATA.countryOwnerPr;
+const log = DATA.results;
+
+function pointsFor(e) {
+  const info = cop[e.country];
+  if (!info) return 0;
+  let key = null;
+  if (e.stage === 'group') key = e.outcome === 'win' ? 'group_win' : e.outcome === 'draw' ? 'group_draw' : null;
+  else if (e.outcome === 'win') key = e.stage;
+  return key ? info.pr * STAGE_MULT[key] : 0;
+}
+function fmt(n){ return Math.round(n*10)/10; }
+
+const owners = {};
+Object.entries(cop).forEach(([country, info]) => {
+  owners[info.owner] = owners[info.owner] || { name: info.owner, total: 0, countries: [] };
+  owners[info.owner].countries.push({ country, pr: info.pr, pts: 0 });
+});
+log.forEach(e => {
+  const info = cop[e.country];
+  if (!info) return;
+  const p = pointsFor(e);
+  owners[info.owner].total += p;
+  const c = owners[info.owner].countries.find(x => x.country === e.country);
+  if (c) c.pts += p;
+});
+
+const ranked = Object.values(owners).sort((a,b) => b.total - a.total);
+ranked.forEach(o => o.countries.sort((a,b) => b.pts - a.pts));
+const max = ranked.length ? ranked[0].total : 1;
+
+const board = document.getElementById('board');
+board.innerHTML = ranked.map((o, i) => {
+  const leader = i === 0 ? ' leader' : '';
+  const barPct = max > 0 ? (o.total / max) * 100 : 0;
+  const scored = o.countries.filter(c => c.pts > 0).length;
+  return `
+    <div class="team${leader}" id="team-${i}">
+      <button class="team-head" onclick="document.getElementById('team-${i}').classList.toggle('open')" aria-expanded="false">
+        <span class="rank">${i+1}</span>
+        <span>
+          <span class="team-name">${o.name}</span>
+          <span class="team-sub">${scored} of 6 countries scoring</span>
+          <span class="bar-track"><span class="bar-fill" style="width:${barPct}%"></span></span>
+        </span>
+        <span class="pts">${fmt(o.total)}<span class="u">pts</span></span>
+        <span class="chev">⌄</span>
+      </button>
+      <div class="detail">
+        ${o.countries.map(c => `
+          <div class="crow">
+            <span class="cname">${c.country}<span class="pr">PR ${c.pr}</span></span>
+            <span class="cpts ${c.pts > 0 ? 'scored' : 'zero'}">${c.pts > 0 ? '+' : ''}${fmt(c.pts)}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}).join('');
+
+document.getElementById('matchCount').textContent = log.filter(e => pointsFor(e) > 0 || e.outcome !== 'win').length / 1 | 0;
+document.getElementById('matchCount').textContent = Math.round(log.length / 2);
+document.getElementById('updated').textContent = '18 June 2026';
+document.getElementById('footer').innerHTML =
+  'Standings reflect completed matches only. Points recalculated from official results.<br>' +
+  'Built for the pool — refresh after each matchday for the latest totals.';
+</script>
+</body>
+</html>

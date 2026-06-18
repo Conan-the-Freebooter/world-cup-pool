@@ -1,0 +1,44 @@
+name: Update World Cup pool standings
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the standings updater
+        run: python3 update_pool.py
+
+      - name: Publish a clean homepage copy
+        run: cp world-cup-pool.html index.html
+
+      - name: Commit and push any changes
+        run: |
+          git config user.name "pool-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add world-cup-pool.html index.html results_snapshot.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit — standings already current."
+          else
+            git commit -m "Update standings ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi

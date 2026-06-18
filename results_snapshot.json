@@ -17,6 +17,15 @@
     "stage": "group",
     "round_label": "Matchday 1"
   },
+  "2026-06-18|Czechia|South Africa|group": {
+    "date": "2026-06-18",
+    "team1": "Czechia",
+    "team2": "South Africa",
+    "score1": 1,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 8"
+  },
   "2026-06-12|Canada|Bosnia and Herzegovina|group": {
     "date": "2026-06-12",
     "team1": "Canada",

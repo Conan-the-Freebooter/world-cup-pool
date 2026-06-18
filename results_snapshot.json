@@ -44,6 +44,15 @@
     "stage": "group",
     "round_label": "Matchday 3"
   },
+  "2026-06-18|Switzerland|Bosnia and Herzegovina|group": {
+    "date": "2026-06-18",
+    "team1": "Switzerland",
+    "team2": "Bosnia and Herzegovina",
+    "score1": 4,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 8"
+  },
   "2026-06-13|Brazil|Morocco|group": {
     "date": "2026-06-13",
     "team1": "Brazil",

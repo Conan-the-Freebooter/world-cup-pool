@@ -89,6 +89,24 @@
     "stage": "group",
     "round_label": "Matchday 3"
   },
+  "2026-06-19|Scotland|Morocco|group": {
+    "date": "2026-06-19",
+    "team1": "Scotland",
+    "team2": "Morocco",
+    "score1": 0,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 9"
+  },
+  "2026-06-19|Brazil|Haiti|group": {
+    "date": "2026-06-19",
+    "team1": "Brazil",
+    "team2": "Haiti",
+    "score1": 3,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 9"
+  },
   "2026-06-12|USA|Paraguay|group": {
     "date": "2026-06-12",
     "team1": "USA",
@@ -106,6 +124,24 @@
     "score2": 0,
     "stage": "group",
     "round_label": "Matchday 3"
+  },
+  "2026-06-19|USA|Australia|group": {
+    "date": "2026-06-19",
+    "team1": "USA",
+    "team2": "Australia",
+    "score1": 2,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 9"
+  },
+  "2026-06-19|Turkey|Paraguay|group": {
+    "date": "2026-06-19",
+    "team1": "Turkey",
+    "team2": "Paraguay",
+    "score1": 0,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 9"
   },
   "2026-06-14|Germany|Curacao|group": {
     "date": "2026-06-14",

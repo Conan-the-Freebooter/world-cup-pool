@@ -1,0 +1,45 @@
+name: Update Pillsbury pool standings
+
+# Same as the main pool's workflow, but for the Pillsbury pool. It runs the
+# Pillsbury updater and commits only that pool's files. Scheduled one hour
+# after the main pool so the two never try to push at the same instant.
+
+on:
+  schedule:
+    - cron: "0 9 * * *"    # 09:00 UTC (main pool runs at 08:00)
+    - cron: "0 15 * * *"   # 15:00 UTC (main pool runs at 14:00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-standings-pillsbury
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the Pillsbury updater
+        run: python3 update_pool_pillsbury.py
+
+      - name: Commit and push any changes
+        run: |
+          git config user.name "pool-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pillsbury.html results_snapshot_pillsbury.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit — Pillsbury standings already current."
+          else
+            # Pull first in case the main pool committed between checkout and now.
+            git pull --rebase --autostash origin main || true
+            git commit -m "Update

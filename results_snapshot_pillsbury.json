@@ -179,6 +179,15 @@
     "stage": "group",
     "round_label": "Matchday 4"
   },
+  "2026-06-20|Netherlands|Sweden|group": {
+    "date": "2026-06-20",
+    "team1": "Netherlands",
+    "team2": "Sweden",
+    "score1": 5,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 10"
+  },
   "2026-06-15|Belgium|Egypt|group": {
     "date": "2026-06-15",
     "team1": "Belgium",

@@ -251,6 +251,15 @@
     "stage": "group",
     "round_label": "Matchday 5"
   },
+  "2026-06-21|Spain|Saudi Arabia|group": {
+    "date": "2026-06-21",
+    "team1": "Spain",
+    "team2": "Saudi Arabia",
+    "score1": 4,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 11"
+  },
   "2026-06-16|France|Senegal|group": {
     "date": "2026-06-16",
     "team1": "France",

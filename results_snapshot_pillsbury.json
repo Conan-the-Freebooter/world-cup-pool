@@ -233,6 +233,24 @@
     "stage": "group",
     "round_label": "Matchday 5"
   },
+  "2026-06-21|Belgium|Iran|group": {
+    "date": "2026-06-21",
+    "team1": "Belgium",
+    "team2": "Iran",
+    "score1": 0,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 11"
+  },
+  "2026-06-21|New Zealand|Egypt|group": {
+    "date": "2026-06-21",
+    "team1": "New Zealand",
+    "team2": "Egypt",
+    "score1": 1,
+    "score2": 3,
+    "stage": "group",
+    "round_label": "Matchday 11"
+  },
   "2026-06-15|Spain|Cape Verde|group": {
     "date": "2026-06-15",
     "team1": "Spain",
@@ -257,6 +275,15 @@
     "team2": "Saudi Arabia",
     "score1": 4,
     "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 11"
+  },
+  "2026-06-21|Uruguay|Cape Verde|group": {
+    "date": "2026-06-21",
+    "team1": "Uruguay",
+    "team2": "Cape Verde",
+    "score1": 2,
+    "score2": 2,
     "stage": "group",
     "round_label": "Matchday 11"
   },
@@ -295,6 +322,15 @@
     "score2": 1,
     "stage": "group",
     "round_label": "Matchday 6"
+  },
+  "2026-06-22|Argentina|Austria|group": {
+    "date": "2026-06-22",
+    "team1": "Argentina",
+    "team2": "Austria",
+    "score1": 2,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 12"
   },
   "2026-06-17|Portugal|DR Congo|group": {
     "date": "2026-06-17",

@@ -305,6 +305,24 @@
     "stage": "group",
     "round_label": "Matchday 6"
   },
+  "2026-06-22|France|Iraq|group": {
+    "date": "2026-06-22",
+    "team1": "France",
+    "team2": "Iraq",
+    "score1": 3,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 12"
+  },
+  "2026-06-22|Norway|Senegal|group": {
+    "date": "2026-06-22",
+    "team1": "Norway",
+    "team2": "Senegal",
+    "score1": 3,
+    "score2": 2,
+    "stage": "group",
+    "round_label": "Matchday 12"
+  },
   "2026-06-16|Argentina|Algeria|group": {
     "date": "2026-06-16",
     "team1": "Argentina",
@@ -329,6 +347,15 @@
     "team2": "Austria",
     "score1": 2,
     "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 12"
+  },
+  "2026-06-22|Jordan|Algeria|group": {
+    "date": "2026-06-22",
+    "team1": "Jordan",
+    "team2": "Algeria",
+    "score1": 1,
+    "score2": 2,
     "stage": "group",
     "round_label": "Matchday 12"
   },

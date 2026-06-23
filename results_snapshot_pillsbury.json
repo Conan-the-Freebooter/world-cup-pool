@@ -377,6 +377,15 @@
     "stage": "group",
     "round_label": "Matchday 7"
   },
+  "2026-06-23|Portugal|Uzbekistan|group": {
+    "date": "2026-06-23",
+    "team1": "Portugal",
+    "team2": "Uzbekistan",
+    "score1": 5,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 13"
+  },
   "2026-06-17|England|Croatia|group": {
     "date": "2026-06-17",
     "team1": "England",

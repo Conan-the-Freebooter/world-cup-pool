@@ -71,6 +71,24 @@
     "stage": "group",
     "round_label": "Matchday 8"
   },
+  "2026-06-24|Switzerland|Canada|group": {
+    "date": "2026-06-24",
+    "team1": "Switzerland",
+    "team2": "Canada",
+    "score1": 2,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 14"
+  },
+  "2026-06-24|Bosnia and Herzegovina|Qatar|group": {
+    "date": "2026-06-24",
+    "team1": "Bosnia and Herzegovina",
+    "team2": "Qatar",
+    "score1": 3,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 14"
+  },
   "2026-06-13|Brazil|Morocco|group": {
     "date": "2026-06-13",
     "team1": "Brazil",

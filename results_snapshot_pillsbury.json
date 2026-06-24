@@ -386,6 +386,15 @@
     "stage": "group",
     "round_label": "Matchday 13"
   },
+  "2026-06-23|Colombia|DR Congo|group": {
+    "date": "2026-06-23",
+    "team1": "Colombia",
+    "team2": "DR Congo",
+    "score1": 1,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 13"
+  },
   "2026-06-17|England|Croatia|group": {
     "date": "2026-06-17",
     "team1": "England",
@@ -403,5 +412,23 @@
     "score2": 0,
     "stage": "group",
     "round_label": "Matchday 7"
+  },
+  "2026-06-23|England|Ghana|group": {
+    "date": "2026-06-23",
+    "team1": "England",
+    "team2": "Ghana",
+    "score1": 0,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 13"
+  },
+  "2026-06-23|Panama|Croatia|group": {
+    "date": "2026-06-23",
+    "team1": "Panama",
+    "team2": "Croatia",
+    "score1": 0,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 13"
   }
 }

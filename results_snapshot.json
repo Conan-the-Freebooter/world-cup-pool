@@ -197,6 +197,24 @@
     "stage": "group",
     "round_label": "Matchday 9"
   },
+  "2026-06-25|Turkey|USA|group": {
+    "date": "2026-06-25",
+    "team1": "Turkey",
+    "team2": "USA",
+    "score1": 3,
+    "score2": 2,
+    "stage": "group",
+    "round_label": "Matchday 15"
+  },
+  "2026-06-25|Paraguay|Australia|group": {
+    "date": "2026-06-25",
+    "team1": "Paraguay",
+    "team2": "Australia",
+    "score1": 0,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 15"
+  },
   "2026-06-14|Germany|Curacao|group": {
     "date": "2026-06-14",
     "team1": "Germany",
@@ -233,6 +251,24 @@
     "stage": "group",
     "round_label": "Matchday 10"
   },
+  "2026-06-25|Curacao|Ivory Coast|group": {
+    "date": "2026-06-25",
+    "team1": "Curacao",
+    "team2": "Ivory Coast",
+    "score1": 0,
+    "score2": 2,
+    "stage": "group",
+    "round_label": "Matchday 15"
+  },
+  "2026-06-25|Ecuador|Germany|group": {
+    "date": "2026-06-25",
+    "team1": "Ecuador",
+    "team2": "Germany",
+    "score1": 2,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 15"
+  },
   "2026-06-14|Netherlands|Japan|group": {
     "date": "2026-06-14",
     "team1": "Netherlands",
@@ -268,6 +304,24 @@
     "score2": 4,
     "stage": "group",
     "round_label": "Matchday 10"
+  },
+  "2026-06-25|Japan|Sweden|group": {
+    "date": "2026-06-25",
+    "team1": "Japan",
+    "team2": "Sweden",
+    "score1": 1,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 15"
+  },
+  "2026-06-25|Tunisia|Netherlands|group": {
+    "date": "2026-06-25",
+    "team1": "Tunisia",
+    "team2": "Netherlands",
+    "score1": 1,
+    "score2": 3,
+    "stage": "group",
+    "round_label": "Matchday 15"
   },
   "2026-06-15|Belgium|Egypt|group": {
     "date": "2026-06-15",

@@ -431,6 +431,15 @@
     "stage": "group",
     "round_label": "Matchday 12"
   },
+  "2026-06-26|Norway|France|group": {
+    "date": "2026-06-26",
+    "team1": "Norway",
+    "team2": "France",
+    "score1": 1,
+    "score2": 4,
+    "stage": "group",
+    "round_label": "Matchday 16"
+  },
   "2026-06-16|Argentina|Algeria|group": {
     "date": "2026-06-16",
     "team1": "Argentina",

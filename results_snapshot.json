@@ -359,6 +359,24 @@
     "stage": "group",
     "round_label": "Matchday 11"
   },
+  "2026-06-26|Egypt|Iran|group": {
+    "date": "2026-06-26",
+    "team1": "Egypt",
+    "team2": "Iran",
+    "score1": 1,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 16"
+  },
+  "2026-06-26|New Zealand|Belgium|group": {
+    "date": "2026-06-26",
+    "team1": "New Zealand",
+    "team2": "Belgium",
+    "score1": 1,
+    "score2": 5,
+    "stage": "group",
+    "round_label": "Matchday 16"
+  },
   "2026-06-15|Spain|Cape Verde|group": {
     "date": "2026-06-15",
     "team1": "Spain",
@@ -395,6 +413,24 @@
     "stage": "group",
     "round_label": "Matchday 11"
   },
+  "2026-06-26|Cape Verde|Saudi Arabia|group": {
+    "date": "2026-06-26",
+    "team1": "Cape Verde",
+    "team2": "Saudi Arabia",
+    "score1": 0,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 16"
+  },
+  "2026-06-26|Uruguay|Spain|group": {
+    "date": "2026-06-26",
+    "team1": "Uruguay",
+    "team2": "Spain",
+    "score1": 0,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 16"
+  },
   "2026-06-16|France|Senegal|group": {
     "date": "2026-06-16",
     "team1": "France",
@@ -430,6 +466,24 @@
     "score2": 2,
     "stage": "group",
     "round_label": "Matchday 12"
+  },
+  "2026-06-26|Norway|France|group": {
+    "date": "2026-06-26",
+    "team1": "Norway",
+    "team2": "France",
+    "score1": 1,
+    "score2": 4,
+    "stage": "group",
+    "round_label": "Matchday 16"
+  },
+  "2026-06-26|Senegal|Iraq|group": {
+    "date": "2026-06-26",
+    "team1": "Senegal",
+    "team2": "Iraq",
+    "score1": 5,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 16"
   },
   "2026-06-16|Argentina|Algeria|group": {
     "date": "2026-06-16",

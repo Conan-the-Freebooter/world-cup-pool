@@ -521,6 +521,24 @@
     "stage": "group",
     "round_label": "Matchday 12"
   },
+  "2026-06-27|Algeria|Austria|group": {
+    "date": "2026-06-27",
+    "team1": "Algeria",
+    "team2": "Austria",
+    "score1": 3,
+    "score2": 3,
+    "stage": "group",
+    "round_label": "Matchday 17"
+  },
+  "2026-06-27|Jordan|Argentina|group": {
+    "date": "2026-06-27",
+    "team1": "Jordan",
+    "team2": "Argentina",
+    "score1": 1,
+    "score2": 3,
+    "stage": "group",
+    "round_label": "Matchday 17"
+  },
   "2026-06-17|Portugal|DR Congo|group": {
     "date": "2026-06-17",
     "team1": "Portugal",
@@ -557,6 +575,24 @@
     "stage": "group",
     "round_label": "Matchday 13"
   },
+  "2026-06-27|Colombia|Portugal|group": {
+    "date": "2026-06-27",
+    "team1": "Colombia",
+    "team2": "Portugal",
+    "score1": 0,
+    "score2": 0,
+    "stage": "group",
+    "round_label": "Matchday 17"
+  },
+  "2026-06-27|DR Congo|Uzbekistan|group": {
+    "date": "2026-06-27",
+    "team1": "DR Congo",
+    "team2": "Uzbekistan",
+    "score1": 3,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 17"
+  },
   "2026-06-17|England|Croatia|group": {
     "date": "2026-06-17",
     "team1": "England",
@@ -592,5 +628,23 @@
     "score2": 1,
     "stage": "group",
     "round_label": "Matchday 13"
+  },
+  "2026-06-27|Panama|England|group": {
+    "date": "2026-06-27",
+    "team1": "Panama",
+    "team2": "England",
+    "score1": 0,
+    "score2": 2,
+    "stage": "group",
+    "round_label": "Matchday 17"
+  },
+  "2026-06-27|Croatia|Ghana|group": {
+    "date": "2026-06-27",
+    "team1": "Croatia",
+    "team2": "Ghana",
+    "score1": 2,
+    "score2": 1,
+    "stage": "group",
+    "round_label": "Matchday 17"
   }
 }

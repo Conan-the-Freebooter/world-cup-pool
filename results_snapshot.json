@@ -646,5 +646,14 @@
     "score2": 1,
     "stage": "group",
     "round_label": "Matchday 17"
+  },
+  "2026-06-28|South Africa|Canada|r32": {
+    "date": "2026-06-28",
+    "team1": "South Africa",
+    "team2": "Canada",
+    "score1": 0,
+    "score2": 1,
+    "stage": "r32",
+    "round_label": "Round of 32"
   }
 }

@@ -656,6 +656,24 @@
     "stage": "r32",
     "round_label": "Round of 32"
   },
+  "2026-06-29|Germany|Paraguay|r32": {
+    "date": "2026-06-29",
+    "team1": "Germany",
+    "team2": "Paraguay",
+    "score1": 1,
+    "score2": 1,
+    "stage": "r32",
+    "round_label": "Round of 32"
+  },
+  "2026-06-29|Netherlands|Morocco|r32": {
+    "date": "2026-06-29",
+    "team1": "Netherlands",
+    "team2": "Morocco",
+    "score1": 1,
+    "score2": 1,
+    "stage": "r32",
+    "round_label": "Round of 32"
+  },
   "2026-06-29|Brazil|Japan|r32": {
     "date": "2026-06-29",
     "team1": "Brazil",

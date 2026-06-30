@@ -682,5 +682,14 @@
     "score2": 1,
     "stage": "r32",
     "round_label": "Round of 32"
+  },
+  "2026-06-30|Ivory Coast|Norway|r32": {
+    "date": "2026-06-30",
+    "team1": "Ivory Coast",
+    "team2": "Norway",
+    "score1": 1,
+    "score2": 2,
+    "stage": "r32",
+    "round_label": "Round of 32"
   }
 }

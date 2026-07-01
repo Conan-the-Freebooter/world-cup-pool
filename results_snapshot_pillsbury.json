@@ -683,12 +683,30 @@
     "stage": "r32",
     "round_label": "Round of 32"
   },
+  "2026-06-30|France|Sweden|r32": {
+    "date": "2026-06-30",
+    "team1": "France",
+    "team2": "Sweden",
+    "score1": 3,
+    "score2": 0,
+    "stage": "r32",
+    "round_label": "Round of 32"
+  },
   "2026-06-30|Ivory Coast|Norway|r32": {
     "date": "2026-06-30",
     "team1": "Ivory Coast",
     "team2": "Norway",
     "score1": 1,
     "score2": 2,
+    "stage": "r32",
+    "round_label": "Round of 32"
+  },
+  "2026-06-30|Mexico|Ecuador|r32": {
+    "date": "2026-06-30",
+    "team1": "Mexico",
+    "team2": "Ecuador",
+    "score1": 2,
+    "score2": 0,
     "stage": "r32",
     "round_label": "Round of 32"
   }

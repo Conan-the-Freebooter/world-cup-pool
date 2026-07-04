@@ -763,5 +763,32 @@
     "score2": 0,
     "stage": "r32",
     "round_label": "Round of 32"
+  },
+  "2026-07-03|Argentina|Cape Verde|r32": {
+    "date": "2026-07-03",
+    "team1": "Argentina",
+    "team2": "Cape Verde",
+    "score1": 1,
+    "score2": 1,
+    "stage": "r32",
+    "round_label": "Round of 32"
+  },
+  "2026-07-03|Colombia|Ghana|r32": {
+    "date": "2026-07-03",
+    "team1": "Colombia",
+    "team2": "Ghana",
+    "score1": 1,
+    "score2": 0,
+    "stage": "r32",
+    "round_label": "Round of 32"
+  },
+  "2026-07-03|Australia|Egypt|r32": {
+    "date": "2026-07-03",
+    "team1": "Australia",
+    "team2": "Egypt",
+    "score1": 1,
+    "score2": 1,
+    "stage": "r32",
+    "round_label": "Round of 32"
   }
 }

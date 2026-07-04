@@ -98,7 +98,16 @@ def is_group_round(round_label):
 
 
 def extract_completed(feed):
-    """Return a dict keyed by a stable match id -> normalized completed result."""
+    """Return a dict keyed by a stable match id -> normalized completed result.
+
+    For knockout matches that go to extra time or penalties, the feed records:
+      ft  = full-time score (may be a draw)
+      et  = score after extra time (may also be a draw if pens follow)
+      p   = penalty shootout score (winner has higher number)
+
+    We always use the actual match winner for knockout scoring — a team that
+    wins on penalties earns the full round multiplier, same as any other win.
+    """
     out = {}
     for m in feed.get("matches", []):
         score = m.get("score") or {}
@@ -112,7 +121,24 @@ def extract_completed(feed):
         stage = "group" if is_group_round(round_label) else KNOCKOUT_STAGE.get(round_label)
         if stage is None:
             continue  # unknown round; skip rather than guess
-        s1, s2 = ft[0], ft[1]
+
+        # Determine the definitive score to use for win/draw/loss logic.
+        # Priority: penalties > extra time > full time.
+        # For group stage there are no extra time or penalties.
+        p = score.get("p")    # e.g. [3, 4] — penalty shootout
+        et = score.get("et")  # e.g. [1, 1] — after extra time
+
+        if stage != "group" and p and len(p) == 2:
+            # Penalties decided it — use the penalty score to find the winner,
+            # but store as a 1-0 / 0-1 so downstream logic stays simple.
+            s1 = 1 if p[0] > p[1] else 0
+            s2 = 1 if p[1] > p[0] else 0
+        elif stage != "group" and et and len(et) == 2:
+            # Extra time decided it (no shootout needed).
+            s1, s2 = et[0], et[1]
+        else:
+            s1, s2 = ft[0], ft[1]
+
         # stable key: date + teams (teams alone could repeat across stages)
         key = f"{m.get('date','?')}|{t1}|{t2}|{stage}"
         out[key] = {

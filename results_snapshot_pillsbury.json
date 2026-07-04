@@ -660,7 +660,7 @@
     "date": "2026-06-29",
     "team1": "Germany",
     "team2": "Paraguay",
-    "score1": 1,
+    "score1": 0,
     "score2": 1,
     "stage": "r32",
     "round_label": "Round of 32"
@@ -669,7 +669,7 @@
     "date": "2026-06-29",
     "team1": "Netherlands",
     "team2": "Morocco",
-    "score1": 1,
+    "score1": 0,
     "score2": 1,
     "stage": "r32",
     "round_label": "Round of 32"
@@ -732,7 +732,7 @@
     "date": "2026-07-01",
     "team1": "Belgium",
     "team2": "Senegal",
-    "score1": 2,
+    "score1": 3,
     "score2": 2,
     "stage": "r32",
     "round_label": "Round of 32"
@@ -768,8 +768,8 @@
     "date": "2026-07-03",
     "team1": "Argentina",
     "team2": "Cape Verde",
-    "score1": 1,
-    "score2": 1,
+    "score1": 3,
+    "score2": 2,
     "stage": "r32",
     "round_label": "Round of 32"
   },
@@ -786,7 +786,7 @@
     "date": "2026-07-03",
     "team1": "Australia",
     "team2": "Egypt",
-    "score1": 1,
+    "score1": 0,
     "score2": 1,
     "stage": "r32",
     "round_label": "Round of 32"

@@ -826,5 +826,14 @@
     "score2": 3,
     "stage": "r16",
     "round_label": "Round of 16"
+  },
+  "2026-07-06|Portugal|Spain|r16": {
+    "date": "2026-07-06",
+    "team1": "Portugal",
+    "team2": "Spain",
+    "score1": 0,
+    "score2": 1,
+    "stage": "r16",
+    "round_label": "Round of 16"
   }
 }

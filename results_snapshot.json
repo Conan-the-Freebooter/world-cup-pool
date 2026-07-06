@@ -808,5 +808,23 @@
     "score2": 3,
     "stage": "r16",
     "round_label": "Round of 16"
+  },
+  "2026-07-05|Brazil|Norway|r16": {
+    "date": "2026-07-05",
+    "team1": "Brazil",
+    "team2": "Norway",
+    "score1": 1,
+    "score2": 2,
+    "stage": "r16",
+    "round_label": "Round of 16"
+  },
+  "2026-07-05|Mexico|England|r16": {
+    "date": "2026-07-05",
+    "team1": "Mexico",
+    "team2": "England",
+    "score1": 2,
+    "score2": 3,
+    "stage": "r16",
+    "round_label": "Round of 16"
   }
 }

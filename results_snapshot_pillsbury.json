@@ -844,5 +844,14 @@
     "score2": 4,
     "stage": "r16",
     "round_label": "Round of 16"
+  },
+  "2026-07-07|Argentina|Egypt|r16": {
+    "date": "2026-07-07",
+    "team1": "Argentina",
+    "team2": "Egypt",
+    "score1": 3,
+    "score2": 2,
+    "stage": "r16",
+    "round_label": "Round of 16"
   }
 }

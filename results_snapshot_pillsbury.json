@@ -835,5 +835,14 @@
     "score2": 1,
     "stage": "r16",
     "round_label": "Round of 16"
+  },
+  "2026-07-06|USA|Belgium|r16": {
+    "date": "2026-07-06",
+    "team1": "USA",
+    "team2": "Belgium",
+    "score1": 1,
+    "score2": 4,
+    "stage": "r16",
+    "round_label": "Round of 16"
   }
 }

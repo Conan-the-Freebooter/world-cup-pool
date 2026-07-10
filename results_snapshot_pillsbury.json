@@ -862,5 +862,14 @@
     "score2": 0,
     "stage": "r16",
     "round_label": "Round of 16"
+  },
+  "2026-07-09|France|Morocco|qf": {
+    "date": "2026-07-09",
+    "team1": "France",
+    "team2": "Morocco",
+    "score1": 2,
+    "score2": 0,
+    "stage": "qf",
+    "round_label": "Quarter-final"
   }
 }

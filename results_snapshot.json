@@ -880,5 +880,23 @@
     "score2": 1,
     "stage": "qf",
     "round_label": "Quarter-final"
+  },
+  "2026-07-11|Norway|England|qf": {
+    "date": "2026-07-11",
+    "team1": "Norway",
+    "team2": "England",
+    "score1": 1,
+    "score2": 2,
+    "stage": "qf",
+    "round_label": "Quarter-final"
+  },
+  "2026-07-11|Argentina|Switzerland|qf": {
+    "date": "2026-07-11",
+    "team1": "Argentina",
+    "team2": "Switzerland",
+    "score1": 3,
+    "score2": 1,
+    "stage": "qf",
+    "round_label": "Quarter-final"
   }
 }

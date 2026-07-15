@@ -898,5 +898,14 @@
     "score2": 1,
     "stage": "qf",
     "round_label": "Quarter-final"
+  },
+  "2026-07-14|France|Spain|sf": {
+    "date": "2026-07-14",
+    "team1": "France",
+    "team2": "Spain",
+    "score1": 0,
+    "score2": 2,
+    "stage": "sf",
+    "round_label": "Semi-final"
   }
 }

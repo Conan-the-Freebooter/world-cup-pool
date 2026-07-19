@@ -916,5 +916,14 @@
     "score2": 2,
     "stage": "sf",
     "round_label": "Semi-final"
+  },
+  "2026-07-18|France|England|third": {
+    "date": "2026-07-18",
+    "team1": "France",
+    "team2": "England",
+    "score1": 4,
+    "score2": 6,
+    "stage": "third",
+    "round_label": "Match for third place"
   }
 }

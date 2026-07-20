@@ -925,5 +925,14 @@
     "score2": 6,
     "stage": "third",
     "round_label": "Match for third place"
+  },
+  "2026-07-19|Spain|Argentina|final": {
+    "date": "2026-07-19",
+    "team1": "Spain",
+    "team2": "Argentina",
+    "score1": 1,
+    "score2": 0,
+    "stage": "final",
+    "round_label": "Final"
   }
 }

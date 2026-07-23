@@ -326,7 +326,7 @@ board.innerHTML = ranked.map((o, i) => {
 
 document.getElementById('matchCount').textContent = log.filter(e => pointsFor(e) > 0 || e.outcome !== 'win').length / 1 | 0;
 document.getElementById('matchCount').textContent = Math.round(log.length / 2);
-document.getElementById('updated').textContent = '22 July 2026';
+document.getElementById('updated').textContent = '23 July 2026';
 document.getElementById('footer').innerHTML =
   'Standings reflect completed matches only. Points recalculated from official results.<br>' +
   'Built for the pool — refresh after each matchday for the latest totals.';
